@@ -1,0 +1,6 @@
+kind: Module
+description: Postgresql for local development - use cloud managed for stages and prod
+type: helm
+name: postgresql
+repo: https://charts.bitnami.com/bitnami
+chart: postgresql

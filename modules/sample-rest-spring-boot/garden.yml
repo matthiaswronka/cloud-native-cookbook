@@ -1,0 +1,31 @@
+kind: Module
+name: sample-service
+description: sample service container
+type: container
+
+hotReload:
+  sync:
+    - source: ./src
+      target: /usr/app/src
+  postSyncCommand: [gradle, compileJava]
+
+services:
+  - name: sample-service
+    ports:
+      - name: http
+        containerPort: 8080
+        # Maps service:80 -> container:8080
+        servicePort: 80
+    ingresses:
+      - path: /api
+        port: http
+    dependencies:
+      - migrate-db
+    env:
+      DB_HOSTNAME: postgresql
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD:
+        secretRef:
+          name: postgresql
+          key: postgresql-password

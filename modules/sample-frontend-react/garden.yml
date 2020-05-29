@@ -1,0 +1,28 @@
+kind: Module
+name: sample-frontend-react
+description: A react frontend, that consumes services
+type: container
+
+hotReload:
+  sync:
+    - source: ./src
+      target: /app/src
+    - source: ./public
+      target: /app/public
+
+services:
+  - name: react-frontend
+    ports:
+      - name: http
+        containerPort: 3000
+        # Maps service:80 -> container:3000
+        servicePort: 80
+    ingresses:
+      - path: /
+        port: http
+    volumes:
+      - name: appcode
+        hostPath: .
+        containerPath: /app
+    env:
+      API_URL: http://cookbook.local.app.garden/api

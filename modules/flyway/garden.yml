@@ -1,0 +1,43 @@
+kind: Module
+type: container
+description: Tasks for database-migrations and fixtures
+name: flyway
+
+tasks:
+  - name: migrate-db
+    command: ["/flyway/flyway", "migrate"]
+    env:
+      FLYWAY_URL: jdbc:postgresql://postgresql:5432/postgres
+      FLYWAY_USER: postgres
+      FLYWAY_PASSWORD:
+        secretRef:
+          name: postgresql
+          key: postgresql-password
+    dependencies:
+      - postgresql
+  - name: provide-fixtures
+    command: ["/flyway/flyway", "clean", "migrate"]
+    args: ["-locations=filesystem:/flyway/sql,filesystem:/flyway/fixtures"]
+    env:
+      FLYWAY_URL: jdbc:postgresql://postgresql:5432/postgres
+      FLYWAY_USER: postgres
+      FLYWAY_PASSWORD:
+        secretRef:
+          name: postgresql
+          key: postgresql-password
+    dependencies:
+      - postgresql
+  - name: purge-database
+    command: ["/flyway/flyway", "clean"]
+    env:
+      FLYWAY_URL: jdbc:postgresql://postgresql:5432/postgres
+      FLYWAY_USER: postgres
+      FLYWAY_PASSWORD:
+        secretRef:
+          name: postgresql
+          key: postgresql-password
+    disabled: true
+    dependencies:
+      - postgresql
+
+
