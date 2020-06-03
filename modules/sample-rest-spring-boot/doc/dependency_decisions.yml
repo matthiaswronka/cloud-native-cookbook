@@ -1,0 +1,53 @@
+---
+- - :permit
+  - Apache 2.0
+  - &1
+    :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:39:06.357867691 Z
+- - :permit
+  - MIT
+  - *1
+- - :permit
+  - Eclipse Distribution License - v 1.0
+  - *1
+- - :permit
+  - Simplified BSD
+  - *1
+- - :permit
+  - GNU Library General Public License v2.1 or later
+  - &2
+    :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:44:08.075542119 Z
+- - :permit
+  - EDL 1.0
+  - *2
+- - :permit
+  - BSD
+  - &3
+    :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:49:15.471882116 Z
+- - :permit
+  - New BSD
+  - *3
+- - :permit
+  - EPL 2.0
+  - &4
+    :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:55:33.983297280 Z
+- - :permit
+  - Eclipse Distribution License v. 1.0
+  - *4
+- - :permit
+  - Eclipse Public License v. 2.0
+  - *4
+- - :permit
+  - Eclipse Public License 1.0
+  - *4

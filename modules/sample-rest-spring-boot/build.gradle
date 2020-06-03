@@ -11,6 +11,9 @@ buildscript {
         classpath 'org.springframework:springloaded:1.2.5.RELEASE'
     }
 }
+plugins {
+    id 'com.github.hierynomus.license' version '0.15.0'
+}
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
@@ -35,9 +38,11 @@ configurations {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile('org.postgresql:postgresql')
-    developmentOnly('org.springframework.boot:spring-boot-devtools')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.postgresql:postgresql'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
+
+

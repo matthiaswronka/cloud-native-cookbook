@@ -1,0 +1,150 @@
+---
+- - :permit
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 09:40:40.660571155 Z
+- - :permit
+  - Apache 2.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:00:07.027830561 Z
+- - :permit
+  - Apache-2.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:00:07.027830561 Z
+- - :permit
+  - Simplified BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:00:25.903897493 Z
+- - :permit
+  - new BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:04:17.831140284 Z
+- - :permit
+  - ISC
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:13:22.918976179 Z
+- - :permit
+  - BSD*
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:32:36.486617894 Z
+- - :permit
+  - BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:32:36.486617894 Z
+- - :permit
+  - 0BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:32:36.486617894 Z
+- - :permit
+  - BSD-3-Clause
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:21:00.457811034 Z
+- - :permit
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:21:17.241625202 Z
+- - :permit
+  - CCO-1.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:22:41.326643655 Z
+- - :permit
+  - CC-BY-3.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:29:12.134399193 Z
+- - :permit
+  - CC-BY-4.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:29:12.134399193 Z
+- - :permit
+  - CC0-1.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:31:32.632509928 Z
+- - :permit
+  - Public Domain
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:32:36.486617894 Z
+- - :permit
+  - WTFPL
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 10:32:36.486617894 Z
+- - :license
+  - fsevents
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:02:44.552016625 Z
+- - :permit
+  - Zlib
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:18:10.948084851 Z
+- - :permit
+  - "(MIT OR Apache-2.0)"
+  - &1
+    :who: 
+    :why: Combinations of previously accepted licences
+    :versions: []
+    :when: 2020-06-02 11:20:54.620233696 Z
+- - :permit
+  - "(Apache-2.0 OR MPL-1.1)"
+  - *1
+- - :permit
+  - "(BSD-3-Clause OR GPL-2.0)"
+  - *1
+- - :permit
+  - "(MIT AND Zlib)"
+  - *1
+- - :permit
+  - "(WTFPL OR MIT)"
+  - *1
+- - :permit
+  - "(MIT AND Zlib)"
+  - *1
+- - :permit
+  - "(MIT AND BSD-3-Clause)"
+  - *1
+- - :permit
+  - "(MIT OR CC0-1.0)"
+  - *1
+- - :permit
+  - Unlicense
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2020-06-02 11:25:10.026950540 Z
