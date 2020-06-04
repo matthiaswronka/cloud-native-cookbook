@@ -4,13 +4,14 @@ on:
   push:
     branches: [ master ]
 
+env:
+    DOCKER_REGISTRY: crdevelopment.azurecr.io
+    DOCKER_IMAGE_NAME: cloud-nativ-cookbook/sample-rest-service
+
 jobs:
   dockerize:
 
     runs-on: ubuntu-latest
-    env:
-        DOCKER_REGISTRY: crdevelopment.azurecr.io
-        DOCKER_IMAGE_NAME: cloud-nativ-cookbook/sample-rest-service
     steps:
     - uses: azure/docker-login@v1
       with:
