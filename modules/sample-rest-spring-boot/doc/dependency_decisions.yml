@@ -2,8 +2,8 @@
 - - :permit
   - Apache 2.0
   - &1
-    :who: 
-    :why: 
+    :who:
+    :why:
     :versions: []
     :when: 2020-06-02 11:39:06.357867691 Z
 - - :permit
@@ -18,8 +18,8 @@
 - - :permit
   - GNU Library General Public License v2.1 or later
   - &2
-    :who: 
-    :why: 
+    :who:
+    :why:
     :versions: []
     :when: 2020-06-02 11:44:08.075542119 Z
 - - :permit
@@ -28,8 +28,8 @@
 - - :permit
   - BSD
   - &3
-    :who: 
-    :why: 
+    :who:
+    :why:
     :versions: []
     :when: 2020-06-02 11:49:15.471882116 Z
 - - :permit
@@ -38,8 +38,8 @@
 - - :permit
   - EPL 2.0
   - &4
-    :who: 
-    :why: 
+    :who:
+    :why:
     :versions: []
     :when: 2020-06-02 11:55:33.983297280 Z
 - - :permit
