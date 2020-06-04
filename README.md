@@ -1,3 +1,6 @@
+![Docker-Image (Rest-Service)](https://github.com/matthiaswronka/cloud-native-cookbook/workflows/Docker-Image%20(Rest-Service)/badge.svg) 
+![Java Checkstyle](https://github.com/matthiaswronka/cloud-native-cookbook/workflows/Java%20Checkstyle/badge.svg)
+
 # cloud-native-cookbook
 Eine Sammlung kleiner Beispiel-Apps.
 
