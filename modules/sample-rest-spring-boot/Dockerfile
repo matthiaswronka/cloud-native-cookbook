@@ -1,4 +1,4 @@
-FROM gradle:6.4-jdk14
+FROM gradle:6.4-jdk8
 
 RUN mkdir /usr/app
 

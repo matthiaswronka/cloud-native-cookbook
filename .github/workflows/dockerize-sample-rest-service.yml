@@ -1,0 +1,24 @@
+name: Build and push Docker-Image (Rest-Service)
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  dockerize:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - env:
+        DOCKER_REGISTRY: crdevelopment.azurecr.io
+        DOCKER_IMAGE_NAME: cloud-nativ-cookbook/sample-rest-service
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ DOCKER_REGISTRY }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+
+    - run: |
+        docker build -t ${{ DOCKER_REGISTRY }}/${{ DOCKER_IMAGE_NAME }}:${{ github.sha }} -f modules/sample-rest-spring-boot/Dockerfile_Prod modules/sample-rest-spring-boot/
+        docker push ${{ DOCKER_REGISTRY }}/${{ DOCKER_IMAGE_NAME }}:${{ github.sha }}
