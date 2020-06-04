@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HapinessController {
 
-    @GetMapping("/ping")
-    public String ping() {
-        return "pong";
-    }
+  @GetMapping("/ping")
+  public String ping() {
+    return "pong";
+  }
 }
