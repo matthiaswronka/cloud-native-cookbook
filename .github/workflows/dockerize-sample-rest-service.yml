@@ -1,4 +1,4 @@
-name: Build and push Docker-Image (Rest-Service)
+name: Docker-Image (Rest-Service)
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 env:
     DOCKER_REGISTRY: crdevelopment.azurecr.io
-    DOCKER_IMAGE_NAME: cloud-nativ-cookbook/sample-rest-service
+    DOCKER_IMAGE_NAME: cloud-native-cookbook/sample-rest-service
 
 jobs:
   dockerize:
