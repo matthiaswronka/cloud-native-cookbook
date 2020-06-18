@@ -1,0 +1,15 @@
+kind: Module
+type: container
+name: api-test
+
+hotReload:
+  sync:
+    - source: ./tests
+      target: /tests
+  postSyncCommand: [pyresttest, http://sample-service/api/, test_suite.yml]
+
+tests:
+  - name: suite
+    dependencies:
+      - sample-service
+    args: [http://sample-service/api/, test_suite.yml]

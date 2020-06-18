@@ -1,0 +1,5 @@
+# Will load the test sets and run them
+# Note that this will run AFTER the current test set is executed
+# Also note that imported tests get a new Context: any variables defined will be lost between test sets
+- import: sanity_tests.yml
+- import: person_tests.yml

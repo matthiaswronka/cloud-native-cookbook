@@ -20,7 +20,7 @@ services:
       - path: /api
         port: http
     dependencies:
-      - migrate-db
+      - provide-fixtures
     env:
       DB_HOSTNAME: postgresql
       DB_PORT: 5432

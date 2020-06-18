@@ -1,0 +1,31 @@
+---
+- config:
+    - testset: "Person Tests"
+- test:
+    - name: "Create Person"
+    - url: "persons"
+    - method: "POST"
+    - headers: {'Content-Type': 'application/json'}
+    - body: '{"name": "Batman", "email": "batman@dc.com", "dateOfBirth": "1939-05-02", "motto": "too evil to be good"}'
+    - expected_status: [200]
+- test:
+    - name: "Read Person"
+    - url: "persons?name=Batman"
+    - headers: {'Content-Type': 'application/json'}
+    - expected_status: [200]
+    - validators:
+        - compare: {jmespath: "[0].email", comparator: "eq", expected: "batman@dc.com"}
+    - extract_binds:
+        - 'id': {'jmespath': '[0].id'}
+- test:
+    - name: "Delete Person"
+    - url: {'template': "persons/$id/"}
+    - method: "DELETE"
+    - expected_status: [200]
+- test:
+    - name: "Do not find non existing"
+    - url: "persons?name=Batman"
+    - headers: {'Content-Type': 'application/json'}
+    - expected_status: [200]
+    - validators:
+          - compare: {jmespath: "length(@)", comparator: "str_eq", expected: "0"}

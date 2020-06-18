@@ -1,0 +1,15 @@
+---
+- config:
+    - testset: "Sanity Tests"
+- test:
+    - name: "Test ping"
+    - url: "ping"
+    - expected_status: [200]
+    - validators:
+        - compare: {raw_body, comparator: 'str_eq', expected: 'pong'}
+- test:
+      - name: "Greeting Test"
+      - url: "greeting?name=Garden"
+      - expected_status: [200]
+      - validators:
+          - compare: {jsonpath_mini: "content", comparator: "contains", expected: "Garden"}
